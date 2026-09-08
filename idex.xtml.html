@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gospel Messages & E-Books</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">
+            <h2>✝️ Gospel Truth</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#videos">Videos & Messages</a></li>
+                <li><a href="#store">E-Books & PDFs</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>దేవుని వాక్యాలు & ఆధ్యాత్మిక పుస్తకాలు</h1>
+            <p>లేటెస్ట్ బైబిల్ సందేశాలు, వీడియోలు మరియు ప్రయోజనకరమైన ఈ-బుక్స్ ఇక్కడ పొందండి.</p>
+            <a href="#store" class="btn">పుస్తకాలు చూడండి</a>
+        </div>
+    </section>
+
+    <!-- Videos & Messages Section -->
+    <section id="videos" class="container">
+        <h2>వీడియోలు & ఆడియో సందేశాలు</h2>
+        <div class="grid">
+            <!-- Video Card 1 -->
+            <div class="card">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video" allowfullscreen></iframe>
+                <h3>ఆధ్యాత్మిక జీవితం - వాక్య సందేశం</h3>
+                <p>ఈ సందేశం మీ విశ్వాసాన్ని బలపరుస్తుంది.</p>
+            </div>
+            <!-- Video Card 2 -->
+            <div class="card">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video" allowfullscreen></iframe>
+                <h3>ప్రార్థన శక్తి - ప్రసంగం</h3>
+                <p>అనుదిన ప్రార్థన జీవితం గురించి వివరణ.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- E-Books & PDFs Store Section -->
+    <section id="store" class="container bg-light">
+        <h2>E-Books & PDF స్టోర్</h2>
+        <div class="grid">
+            
+            <!-- Free PDF Item -->
+            <div class="card store-card">
+                <img src="https://via.placeholder.com/250x320?text=Free+Bible+Study+PDF" alt="Free PDF">
+                <h3>ఉచిత బైబిల్ స్టడీ గైడ్ (PDF)</h3>
+                <p class="price">ఉచితం (Free)</p>
+                <a href="sample.pdf" download class="btn btn-free">ఇప్పుడే డౌన్‌లోడ్ చేయండి</a>
+            </div>
+
+            <!-- Paid E-Book Item 1 -->
+            <div class="card store-card">
+                <img src="https://via.placeholder.com/250x320?text=E-Book+1" alt="E-Book 1">
+                <h3>విశ్వాస జీవితం (E-Book)</h3>
+                <p class="price">₹99</p>
+                <button class="btn btn-buy" onclick="openPaymentModal('విశ్వాస జీవితం', 99)">Buy Now</button>
+            </div>
+
+            <!-- Paid E-Book Item 2 -->
+            <div class="card store-card">
+                <img src="https://via.placeholder.com/250x320?text=E-Book+2" alt="E-Book 2">
+                <h3>ప్రార్థన విజయం (E-Book)</h3>
+                <p class="price">₹149</p>
+                <button class="btn btn-buy" onclick="openPaymentModal('ప్రార్థన విజయం', 149)">Buy Now</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact & Footer -->
+    <footer id="contact">
+        <p>© 2026 Gospel Truth Ministry. All Rights Reserved.</p>
+        <p>Contact Us: info@yourwebsite.com | Phone: +91 9876543210</p>
+    </footer>
+
+    <!-- Payment Popup Modal -->
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3>పుస్తకం కొనుగోలు చేయండి</h3>
+            <p id="bookTitle" style="font-weight: bold;"></p>
+            <p>ధర: <span id="bookPrice"></span></p>
+            
+            <form id="checkoutForm" onsubmit="handlePayment(event)">
+                <input type="text" id="custName" placeholder="మీ పేరు" required>
+                <input type="email" id="custEmail" placeholder="మీ ఈమెయిల్ (PDF పంపడానికి)" required>
+                <input type="tel" id="custPhone" placeholder="ఫోన్ నంబర్" required>
+                <button type="submit" class="btn btn-buy">Pay with UPI / PhonePe / Card</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
